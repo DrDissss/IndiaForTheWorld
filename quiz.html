@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Indian Sports Quiz 2024</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        .question { margin-bottom: 20px; }
+    </style>
+</head>
+<body>
+    <h1>Indian Sports Quiz 2024</h1>
+    <form id="quizForm">
+        <div class="question">
+            <p>1. Who led India to victory in the 2024 T20 World Cup?</p>
+            <input type="radio" name="q1" value="correct">A) Suryakumar Yadav<br>
+            <input type="radio" name="q1" value="incorrect">B) Rohit Sharma<br>
+            <input type="radio" name="q1" value="incorrect">C) Virat Kohli
+        </div>
+
+        <div class="question">
+            <p>2. Which Indian badminton duo won the 2024 Indonesia Open?</p>
+            <input type="radio" name="q2" value="correct">A) Chirag Shetty & Satwiksairaj Rankireddy<br>
+            <input type="radio" name="q2" value="incorrect">B) PV Sindhu & Kidambi Srikanth<br>
+            <input type="radio" name="q2" value="incorrect">C) Ashwini Ponnappa & Jwala Gutta
+        </div>
+
+        <div class="question">
+            <p>3. Which city hosted the 2024 Indian Premier League final?</p>
+            <input type="radio" name="q3" value="incorrect">A) Mumbai<br>
+            <input type="radio" name="q3" value="correct">B) Ahmedabad<br>
+            <input type="radio" name="q3" value="incorrect">C) Kolkata
+        </div>
+
+        <div class="question">
+            <p>4. Which Indian athlete won the gold medal in javelin at the 2024 Asian Games?</p>
+            <input type="radio" name="q4" value="incorrect">A) Shivpal Singh<br>
+            <input type="radio" name="q4" value="correct">B) Neeraj Chopra<br>
+            <input type="radio" name="q4" value="incorrect">C) Annu Rani
+        </div>
+        
+        <div class="question">
+            <p>5. Which Indian tennis player reached the semi-finals of the 2024 Wimbledon?</p>
+            <input type="radio" name="q5" value="correct">A) Rohan Bopanna<br>
+            <input type="radio" name="q5" value="incorrect">B) Sumit Nagal<br>
+            <input type="radio" name="q5" value="incorrect">C) Sania Mirza
+        </div>
+        
+        <div class="question">
+            <p>6. Who won the 'Emerging Player' award in the 2024 Indian Premier League?</p>
+            <input type="radio" name="q6" value="incorrect">A) Shubman Gill<br>
+            <input type="radio" name="q6" value="correct">B) Yashasvi Jaiswal<br>
+            <input type="radio" name="q6" value="incorrect">C) Tilak Varma
+        </div>
+        
+        <div class="question">
+            <p>7. Which Indian hockey player won the FIH Player of the Year award in 2024?</p>
+            <input type="radio" name="q7" value="incorrect">A) Harmanpreet Singh<br>
+            <input type="radio" name="q7" value="correct">B) Manpreet Singh<br>
+            <input type="radio" name="q7" value="incorrect">C) PR Sreejesh
+        </div>
+        
+        <input type="button" value="Submit" onclick="checkAnswers()">
+    </form>
+
+    <p id="result"></p>
+
+    <script>
+        function checkAnswers() {
+            let correct = 0;
+            const form = document.forms.quizForm;
+
+            if (form.q1.value === "correct") { correct++; }
+            if (form.q2.value === "correct") { correct++; }
+            if (form.q3.value === "correct") { correct++; }
+            if (form.q4.value === "correct") { correct++; }
+            if (form.q5.value === "correct") { correct++; }
+            if (form.q6.value === "correct") { correct++; }
+            if (form.q7.value === "correct") { correct++; }
+            document.getElementById("result").innerHTML = `You got ${correct} out of 7 questions correct.`;
+        }
+    </script>
+</body>
+</html>
